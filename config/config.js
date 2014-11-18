@@ -24,13 +24,13 @@ var home = process.env.INSIGHT_DB || (getUserHome() + '/.insight');
 if (process.env.INSIGHT_NETWORK === 'livenet') {
   env = 'livenet';
   db = home;
-  port = '3000';
-  b_port = '8332';
-  p2p_port = '8333';
+  port = '4000';
+  b_port = '11082';
+  p2p_port = '11081';
 } else {
   env = 'testnet';
   db = home + '/testnet';
-  port = '3001';
+  port = '4001';
   b_port = '18332';
   p2p_port = '18333';
 }
@@ -56,9 +56,9 @@ var isWin = /^win/.test(process.platform);
 var isMac = /^darwin/.test(process.platform);
 var isLinux = /^linux/.test(process.platform);
 if (!dataDir) {
-  if (isWin) dataDir = '%APPDATA%\\Bitcoin\\';
-  if (isMac) dataDir = process.env.HOME + '/Library/Application Support/Bitcoin/';
-  if (isLinux) dataDir = process.env.HOME + '/.bitcoin/';
+  if (isWin) dataDir = '%APPDATA%\\Wolrdcoin\\';
+  if (isMac) dataDir = process.env.HOME + '/Library/Application Support/Worldcoin/';
+  if (isLinux) dataDir = process.env.HOME + '/.worldcoin/';
 }
 dataDir += network === 'testnet' ? 'testnet3' : '';
 
@@ -68,8 +68,8 @@ var ignoreCache = process.env.INSIGHT_IGNORE_CACHE || 0;
 
 var bitcoindConf = {
   protocol: process.env.BITCOIND_PROTO || 'http',
-  user: process.env.BITCOIND_USER || 'user',
-  pass: process.env.BITCOIND_PASS || 'pass',
+  user: process.env.BITCOIND_USER || 'worldcoinrpc',
+  pass: process.env.BITCOIND_PASS || '2ssuE5MqkjKc9AhsYmgdfEiiaMLVB9K5vikGSzbaoyiV',
   host: process.env.BITCOIND_HOST || '127.0.0.1',
   port: process.env.BITCOIND_PORT || b_port,
   p2pPort: process.env.BITCOIND_P2P_PORT || p2p_port,

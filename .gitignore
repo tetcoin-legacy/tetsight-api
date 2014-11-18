@@ -38,3 +38,6 @@ db/testnet/blocks
 
 README.html
 public
+
+config
+config/*
