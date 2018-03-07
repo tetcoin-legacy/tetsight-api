@@ -55,7 +55,7 @@
     "base58-native": "0.1.2",
     "bignum": "*",
     "bitauth": "^0.1.1",
-    "bitcore": "0.1.37",
+    "bitcore": "git://github.com/tetcoin/tetcore.git#773da44f61cf68e73d084f0a810e11ccce2b85c8",
     "bufferput": "git://github.com/bitpay/node-bufferput.git",
     "buffertools": "*",
     "commander": "^2.3.0",
